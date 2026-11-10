@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -44,5 +45,33 @@ public class Main {
         codigounico.put("c03", p2);
         codigounico.put("c04", lista.get(4));
         System.out.println("Codgo unico 03: "+ codigounico.get("c01").descripcion());
+
+        Scanner sc = new Scanner(System.in);
+        int opcion;
+        List<Persona> nueva = new ArrayList<>();
+
+
+
+        do{
+
+            System.out.println("Ingrese el nombre de la persona:");
+            String nombre;
+            nombre=sc.next();
+            System.out.println("Ingrese la  edad de la persona:");
+            int edad;
+            edad=sc.nextInt();
+            System.out.println("Ingrese la estatura de la persona:");
+            float estatura;
+            estatura=sc.nextFloat();
+
+            nueva.add(new Persona(nombre, edad, estatura));
+
+            System.out.println("Ingrese cualquier numero para continuar, 0 para finalizar: ");
+            opcion=sc.nextInt();
+
+        }
+        while (opcion != 0);
+
+
     }
 }
