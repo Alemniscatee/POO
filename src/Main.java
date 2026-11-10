@@ -1,3 +1,6 @@
+import esfot.Estudiante;
+import esfot.Persona;
+
 import java.util.*;
 import java.util.Scanner;
 
@@ -46,32 +49,36 @@ public class Main {
         codigounico.put("c04", lista.get(4));
         System.out.println("Codgo unico 03: "+ codigounico.get("c01").descripcion());
 
-        Scanner sc = new Scanner(System.in);
+        List<Persona>inscritos=new ArrayList<>();
+        Scanner sc= new Scanner(System.in);
         int opcion;
-        List<Persona> nueva = new ArrayList<>();
-
-
-
-        do{
-
-            System.out.println("Ingrese el nombre de la persona:");
+        do {
+            System.out.println("Ingrese el nombre de la nueva persona: ");
             String nombre;
             nombre=sc.next();
-            System.out.println("Ingrese la  edad de la persona:");
+            System.out.println("Ingrese la edad de la nueva persona: ");
             int edad;
             edad=sc.nextInt();
-            System.out.println("Ingrese la estatura de la persona:");
+            System.out.println("Ingrese la estatura de la nueva persona: ");
             float estatura;
             estatura=sc.nextFloat();
+            inscritos.add((new Persona(nombre,edad,estatura)));
+            System.out.println("Ingresado con exito");
 
-            nueva.add(new Persona(nombre, edad, estatura));
 
-            System.out.println("Ingrese cualquier numero para continuar, 0 para finalizar: ");
-            opcion=sc.nextInt();
+            System.out.println("0 para salir: ");
+            opcion= sc.nextInt();
+
+
 
         }
-        while (opcion != 0);
-
-
+        while (opcion !=0);
+        System.out.println("herencia");
+        Estudiante e=new Estudiante();
+        e.setNombre("alejo");
+        e.setEdad(21);
+        e.setEstatura(1.80f);
+        e.setPromedio(16);
+        e.infoProm();
     }
 }
