@@ -20,4 +20,5 @@ public class Pasante extends Estudiante {
         super.imprimirDatos();
         System.out.println("Porcentaje de beca: "+ this.porcentajeBeca);
     }
+
 }
