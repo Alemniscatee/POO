@@ -90,5 +90,9 @@ public class Main {
         pasante.setPorcentajeBeca(0.7);
         pasante.becaInfo();
         pasante.descripcion();
+        p.imprimirDatos();
+        e.imprimirDatos();
+        pasante.imprimirDatos();
+
     }
 }

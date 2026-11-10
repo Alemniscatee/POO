@@ -13,5 +13,11 @@ public class Pasante extends Estudiante {
 
     public void becaInfo(){
     System.out.println("Porcentaje de beca: "+ this.porcentajeBeca);
-}
+    }
+
+    @Override
+    public void imprimirDatos() {
+        super.imprimirDatos();
+        System.out.println("Porcentaje de beca: "+ this.porcentajeBeca);
+    }
 }

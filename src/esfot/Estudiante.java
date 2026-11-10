@@ -16,4 +16,10 @@ public class Estudiante extends Persona {
     public void infoProm (){
         System.out.println("Promedio "+ this.promedio);
     }
+
+    @Override
+    public void imprimirDatos() {
+        super.imprimirDatos();
+        System.out.println("Promedio: "+ this.promedio);
+    }
 }

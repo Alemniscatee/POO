@@ -48,6 +48,12 @@ public class Persona {
     public String descripcion (){
         return ("Nombre: " +nombre);
     }
+    public void imprimirDatos (){
+        System.out.println("-------------------------/");
+        System.out.println("Nombre: "+ this.nombre);
+        System.out.println("Edad: "+ this.edad);
+        System.out.println("Estatura: "+ this.estatura);
+    }
 
     public Persona copiar (){
         return new Persona(nombre);
