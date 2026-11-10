@@ -1,4 +1,5 @@
 import esfot.Estudiante;
+import esfot.Pasante;
 import esfot.Persona;
 
 import java.util.*;
@@ -80,5 +81,14 @@ public class Main {
         e.setEstatura(1.80f);
         e.setPromedio(16);
         e.infoProm();
+        System.out.println("Pasante---");
+        Pasante pasante= new Pasante();
+        pasante.setNombre("pedro");
+        pasante.setEstatura(1.70f);
+        pasante.setEdad(21);
+        pasante.setPromedio(19);
+        pasante.setPorcentajeBeca(0.7);
+        pasante.becaInfo();
+        pasante.descripcion();
     }
 }
